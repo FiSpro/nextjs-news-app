@@ -1,11 +1,15 @@
-import { DUMMY_NEWS } from "@/dummy-news";
+// This is when we were using dummy-news.js. Now we are using "backend".
+// import { DUMMY_NEWS } from "@/dummy-news";
 import NewsList from "@/components/news-list";
+import { getAllNews } from "@/lib/news";
 
-export default function NewsPage() {
+export default async function NewsPage() {
+  const news = getAllNews();
+
   return (
     <>
       <h1>News Page</h1>
-      <NewsList news={DUMMY_NEWS} />
+      <NewsList news={news} />
     </>
   );
 }
