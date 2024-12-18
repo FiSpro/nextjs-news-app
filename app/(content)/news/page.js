@@ -1,10 +1,10 @@
-// This is when we were using dummy-news.js. Now we are using "backend".
+// This is when we were using "dummy-news.js". Now we are using "backend".
 // import { DUMMY_NEWS } from "@/dummy-news";
 import NewsList from "@/components/news-list";
 import { getAllNews } from "@/lib/news";
 
 export default async function NewsPage() {
-  const news = getAllNews();
+  const news = await getAllNews();
 
   return (
     <>
